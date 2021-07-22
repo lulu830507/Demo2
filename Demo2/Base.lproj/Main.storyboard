@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snoopy" translatesAutoresizingMaskIntoConstraints="NO" id="AyX-jj-l1h">
+                                <rect key="frame" x="30" y="170" width="330" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7U6-Jd-MS8"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="P1K-68-wu8" appends="YES" id="F41-Kd-3WZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ezb-4d-9zJ" appends="YES" id="7l9-bB-dFI"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apu-9a-E4x">
+                                <rect key="frame" x="114.66666666666669" y="85" width="161" height="50"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.72549019609999998" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BsI-aV-ZRL">
+                                <rect key="frame" x="134.66666666666666" y="500" width="121" height="27"/>
+                                <connections>
+                                    <action selector="changePageDot:" destination="BYZ-38-t0r" eventType="valueChanged" id="hph-Is-9MB"/>
+                                </connections>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avx-0U-vRz">
+                                <rect key="frame" x="157" y="557" width="76" height="43"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.72549019609999998" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGw-dI-qzS">
+                                <rect key="frame" x="120" y="620" width="40" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="⬅️"/>
+                                <connections>
+                                    <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Rh-qZ-FC7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8C-VU-bFN">
+                                <rect key="frame" x="230" y="620" width="40" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="➡️"/>
+                                <connections>
+                                    <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6OT-GF-SIc"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8Ok-l6-f7s">
+                                <rect key="frame" x="45" y="709" width="300" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <segments>
+                                    <segment title="Dog"/>
+                                    <segment title="Bird"/>
+                                    <segment title="Humans"/>
+                                </segments>
+                                <color key="tintColor" red="0.92532891039999998" green="0.86567896600000005" blue="0.31354445219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="selectedSegmentTintColor" red="0.99999040370000003" green="0.99199455979999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="changeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="gLF-nE-7Fe"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo6-zE-HqL">
+                                <rect key="frame" x="174" y="770" width="42" height="35.666666666666629"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                <color key="textColor" red="0.99999040370000003" green="0.99199455979999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x8C-VU-bFN" secondAttribute="trailing" constant="120" id="1GY-LK-V5Q"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="170" id="5k5-49-R8d"/>
+                            <constraint firstItem="avx-0U-vRz" firstAttribute="top" secondItem="BsI-aV-ZRL" secondAttribute="bottom" constant="30" id="7s8-Q6-Mc2"/>
+                            <constraint firstItem="8Ok-l6-f7s" firstAttribute="top" secondItem="cGw-dI-qzS" secondAttribute="bottom" constant="35" id="GMk-ti-ZcR"/>
+                            <constraint firstItem="x8C-VU-bFN" firstAttribute="top" secondItem="AyX-jj-l1h" secondAttribute="bottom" constant="150" id="Gek-sV-6YI"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="centerX" secondItem="BsI-aV-ZRL" secondAttribute="centerX" id="PkA-5w-m9i"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Q6X-cZ-mqg"/>
+                            <constraint firstItem="cGw-dI-qzS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Qrz-xK-MSG"/>
+                            <constraint firstItem="cGw-dI-qzS" firstAttribute="top" secondItem="AyX-jj-l1h" secondAttribute="bottom" constant="150" id="SiW-lR-CHe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ok-l6-f7s" secondAttribute="trailing" constant="45" id="Vfx-6C-AC4"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yla-aL-Pa0"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="centerX" secondItem="apu-9a-E4x" secondAttribute="centerX" id="ZQd-OP-OMS"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="centerX" secondItem="avx-0U-vRz" secondAttribute="centerX" id="ZpL-HD-ymU"/>
+                            <constraint firstItem="AyX-jj-l1h" firstAttribute="top" secondItem="apu-9a-E4x" secondAttribute="bottom" constant="35" id="aKT-4b-Ag0"/>
+                            <constraint firstItem="Yo6-zE-HqL" firstAttribute="top" secondItem="8Ok-l6-f7s" secondAttribute="bottom" constant="30" id="fss-mn-jYH"/>
+                            <constraint firstItem="Yo6-zE-HqL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="tkz-SM-wVn"/>
+                            <constraint firstItem="BsI-aV-ZRL" firstAttribute="top" secondItem="AyX-jj-l1h" secondAttribute="bottom" constant="30" id="uL1-5b-Plu"/>
+                            <constraint firstItem="8Ok-l6-f7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="yHq-db-VkO"/>
+                            <constraint firstItem="Yo6-zE-HqL" firstAttribute="centerX" secondItem="8Ok-l6-f7s" secondAttribute="centerX" id="z8d-LU-LXM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Images" destination="AyX-jj-l1h" id="J4B-pl-jWW"/>
+                        <outlet property="characterLabel" destination="apu-9a-E4x" id="Avn-Dm-ygy"/>
+                        <outlet property="leftButton" destination="cGw-dI-qzS" id="KuS-xG-oMp"/>
+                        <outlet property="nameLabel" destination="avx-0U-vRz" id="Yyh-ie-U6E"/>
+                        <outlet property="pageDot" destination="BsI-aV-ZRL" id="ifu-69-Pzp"/>
+                        <outlet property="pageLabel" destination="Yo6-zE-HqL" id="RLZ-Zq-Qf9"/>
+                        <outlet property="rightButton" destination="x8C-VU-bFN" id="OmH-p2-jeh"/>
+                        <outlet property="segment" destination="8Ok-l6-f7s" id="OIM-31-hVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="P1K-68-wu8"/>
+                <swipeGestureRecognizer direction="right" id="Ezb-4d-9zJ">
+                    <connections>
+                        <action selector="swipeChangePage:" destination="BYZ-38-t0r" id="r93-PE-WlQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="132" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="snoopy" width="200" height="252"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
